@@ -4,18 +4,18 @@ import Link from "next/link";
 import { Ellipsis, LogOut } from "lucide-react";
 import { usePathname } from "next/navigation";
 
-import { cn } from "@/lib/utils";
-import { getMenuList } from "@/lib/menu-list";
-import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { CollapseMenuButton } from "@/components/admin-panel/collapse-menu-button";
+import { cn } from "../../lib/utils";
+import { getMenuList } from "../../../../packages/ui/src/lib/menu-list";
+import { Button } from "@repo/ui/components/ui/button";
+import { ScrollArea } from "@repo/ui/components/ui/scroll-area";
+import { CollapseMenuButton } from "./collapse-menu-button";
 import {
   Tooltip,
   TooltipTrigger,
   TooltipContent,
   TooltipProvider
-} from "@/components/ui/tooltip";
-
+} from "@repo/ui/components/ui/tooltip";
+TooltipProvider
 interface MenuProps {
   isOpen: boolean | undefined;
 }

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import PlaceholderContent from "@/components/demo/placeholder-content";
-import { ContentLayout } from "@/components/admin-panel/content-layout";
+import PlaceholderContent from "../../../components/demo/placeholder-content";
+import { ContentLayout } from "../../../components/admin-panel/content-layout";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -9,7 +9,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator
-} from "@/components/ui/breadcrumb";
+} from "@repo/ui/components/ui/breadcrumb";
 
 export default function CategoriesPage() {
   return (

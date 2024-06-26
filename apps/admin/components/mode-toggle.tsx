@@ -4,13 +4,13 @@ import * as React from "react";
 import { useTheme } from "next-themes";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@repo/ui/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
   TooltipProvider
-} from "@/components/ui/tooltip";
+} from "@repo/ui/components/ui/tooltip";
 
 export function ModeToggle() {
   const { setTheme, theme } = useTheme();
