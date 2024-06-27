@@ -1,22 +1,35 @@
-
-import "./globals.css";
+import Providers from '../components/layout/providers';
+import { Toaster } from '@repo/ui/components/ui/toaster';
+import type { Metadata } from 'next';
+import NextTopLoader from 'nextjs-toploader';
+import { Inter } from 'next/font/google';
+import './globals.css';
 import "@repo/ui/globals.css";
 
-import { ThemeProvider } from "../providers/theme-provider";
+// import { auth } from '../auth';
 
+const inter = Inter({ subsets: ['latin'] });
 
+export const metadata: Metadata = {
+  title: 'Next Shadcn',
+  description: 'Basic dashboard with Next.js and Shadcn'
+};
 
-export default function RootLayout({
+export default async function RootLayout({
   children
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  // const session = await auth();
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <body className={`${inter.className} overflow-hidden`}>
+        <NextTopLoader />
+        {/* <Providers session={session}> */}
+        <Providers >
+          <Toaster />
           {children}
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

@@ -2,7 +2,7 @@
 const nextConfig = {
   transpilePackages: ["@repo/ui"],
   images: {
-    domains: ['i.pravatar.cc'],
+    domains: ['i.pravatar.cc','utfs.io'],
   },
 };
 
