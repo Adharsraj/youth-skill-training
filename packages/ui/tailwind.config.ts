@@ -20,6 +20,7 @@ const config = {
   theme: {
     fontFamily: {
       concord: ["var(--font-concord)"],
+      montserrat: ["var(--font-montserrat)"],
     },
     container: {
       center: true,
@@ -41,8 +42,9 @@ const config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          blue: "#28246E",
-          yellow: "#FAA11F",
+          blue: "#3446CD",
+          lightBlue: "#3446CD",
+          red: "#D64101",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",

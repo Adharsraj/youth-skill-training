@@ -33,7 +33,12 @@ export default function CategoriesPage() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
+
+
       <PlaceholderContent />
+
+
+      
     </ContentLayout>
   );
 }
