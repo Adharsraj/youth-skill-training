@@ -9,51 +9,58 @@ import { Card } from "@repo/ui/components/ui/card";
 import { aboutUsDatas } from "../../constants/aboutUsDatas";
 import { ourSectorDatas } from "../../constants/ourSectorDatas";
 import { truncateText } from "../../utils/textUtils";
+import MarqueeDemo from "../components/marquees/Demo";
+import { ImageMarquee } from "../components/marquees/ImageMarquee";
+import { logos } from "../../constants/marqueeDatas";
 
 export default function Home() {
   return (
     <>
       <div className="bg-primary-blue">
+        <div classname="bg-primary-orange">
+
+      <ImageMarquee mainClass="w-24 md:w-52 " className="md:h-20 h-10" datas={logos}/>
+        </div>
+
         <MaxWidthWrapper className="text-center">
           <div className="font-medium text-white pt-6">
-            <p className="text-[12px] font-light md:text-base">
+            <p className="text-[12px] font-light md:text-base lg:text-2xl xl:text-3xl">
               युवा रोजगार कौशल प्रशिक्षण
             </p>
-            <p className="font-extrabold text-base py-2 md:text-2xl">
+            <p className="font-extrabold text-base py-2 md:text-2xl lg:text-3xl xl:text-[40px] xl:py-3 ">
               YOUTH EMPLOYABILITY SKILL TRAINING
             </p>
-            <p className="text-[11px] md:text-sm font-light">
+            <p className="text-[11px] md:text-sm font-light lg:text-lg xl:text-2xl ">
               (An Aided Skill Training Institute Under the Government Project)
             </p>
-            <p className="text-[12px] md:text-sm font-light py-2 pb-8">
+            <p className="text-[12px] md:text-sm font-light py-2 pb-8 xl:pb-10 lg:text-lg  xl:text-2xl">
               सरकारी परियोजना के तहत एक सहायता प्राप्त कौशल प्रशिक्षण संस्थान
             </p>
-            <p className="font-bold text-xxs md:text-xs md:font-light">
+            <p className="font-bold text-xxs md:text-xs md:font-light lg:text-base">
               Approved Co-Operation Accreditation And Affiliation Given By
             </p>
-            <p className="text-base md:font-bold py-2">
+            <p className="text-base md:font-bold py-2 xl:py-3 lg:text-lg xl:text-xl">
               MSME TECHNOLOGY DEVELOPMENT CENTRE
             </p>
-            <p className="font-normal text-xxs md:font-light md:text-xs">
+            <p className="font-normal text-xxs md:font-light md:text-xs lg:text-base">
               Ministry of Micro, Small & Medium Enterprises, Government of India
             </p>
-            <p className="text-xxs py-6 md:text-xs md:py-3">Run By</p>
-            <p className="font-bold text-base">
+            <p className="text-xxs py-6 md:text-xs md:py-3 xl:py-4 lg:text-sm xl:text-base">Run By</p>
+            <p className="font-bold text-base lg:text-lg xl:text-xl">
               National Skill Development Corporation
             </p>
-            <p className="font-normal text-xxs md:text-xs md:font-light">(NSDC TP ID :144430)</p>
-            <p className="text-xxs py-6 md:text-xs md:font-light md:py-3">A Government of India Project</p>
+            <p className="font-normal text-xxs md:text-xs md:font-light lg:text-base">(NSDC TP ID :144430)</p>
+            <p className="text-xxs py-6 md:text-xs md:font-light md:py-3 lg:text-base xl:py-5">A Government of India Project</p>
             <div className="flex justify-center">
-              <span className="text-white text-[10px] md:font-light md:text-sm p-1.5 border bg-transparent mb-6 md:mb-8 inline-flex justify-center items-center">
+              <span className="text-white text-[10px] md:font-light md:text-sm lg:text-base rounded-lg xl:text-xl p-1.5 xl:p-2.5 xl:mb-14 border bg-transparent mb-6 md:mb-8 inline-flex justify-center items-center">
                 Vocational Training for Unemployed Youth
               </span>
             </div>
           </div>
         </MaxWidthWrapper>
-        <div className="bg-black text-white text-center flex justify-center items-center h-[15vh]">
-          marquee
-        </div>
+       
       </div>
+        <ImageMarquee mainClass="w-24 md:w-52" className="md:h-20 h-10" datas={logos}/>
       {/* latest news */}
       <MaxWidthWrapper>
         <div className="flex justify-between items-center mt-6 mb-5">
@@ -170,7 +177,7 @@ export default function Home() {
         
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper className="px-0 mt-7">
+      <MaxWidthWrapper className="px-0 mt-7 md:px-0">
         <div className="bg-primary-orange md:hidden flex justify-around p-2 mb-7 md:max-w-[400px]">
           {aboutUsDatas.map((data, index) => (
             <AboutCard key={index} card={data} />
@@ -183,15 +190,15 @@ export default function Home() {
               alt=""
               width={400}
               height={400}
-              className="mt-2 h-[340px] object-cover w-full "
+              className="mt-2 h-[340px] md:h-[300px] object-cover w-full "
             />
 
-            <div className="absolute  top-0 left-0 right-0 text-center">
-              <p className="text-white  text-xxs pt-4 font-[900]">
+            <div className="absolute  top-0 left-0 right-0 text-center max-w-[500px] mx-auto md:flex md:flex-col md:justify-center md:items-center md:h-full">
+              <p className="text-white  text-xxs pt-4 ">
                 OUR MISSION
               </p>
-              <Separator className="my-4" />
-              <p className="text-white text-2xl  px-2  font-extrabold pt-1 ">
+              <Separator className="my-4 md:my-2" />
+              <p className="text-white text-2xl  px-2  font-extrabold pt-1 md:text-lg">
                 Equipping Students with Critical Thinking, Global Perspectives,
                 and Core Values for Future Success
               </p>
@@ -207,7 +214,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
+       
+      </MaxWidthWrapper>
+      <MaxWidthWrapper>
           <div className=" mt-6 mb-5">
             <div className="flex pl-3  items-center gap-2">
               <SvgIcon name="ourAffirmations" className="w-5 md:w-6" />
@@ -217,8 +226,7 @@ export default function Home() {
             </div>
           </div>
           <Separator className="my-4" />
-        </div>
-      </MaxWidthWrapper>
+        </MaxWidthWrapper>
       <div className="bg-black text-white text-center flex justify-center items-center h-[15vh]">
         marquee
       </div>
@@ -233,7 +241,10 @@ export default function Home() {
           </div>
         </div>
         <Separator className="my-4" />
-        <div className="flex flex-col gap-4">
+        <div className="bg-black text-white text-center hidden md:flex justify-center items-center h-[15vh]">
+        marquee
+      </div>
+        <div className="flex flex-col gap-4 md:hidden">
           {ourSectorDatas.slice(0, 2).map((sector) => (
             <SectorCards sector={sector} />
           ))}
@@ -323,7 +334,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ card }) => (
       <p className="font-medium text-xs pt-3 md:text-xxs">{truncateText(card.desc,15)} </p>
       <div className="flex  items-center gap-2 pt-8 pb-4 md:pt-2">
         <span className="text-primary-blue font-bold text-xs md:text-xxs ">Read more</span>
-        <SvgIcon name="arrowTopRight" className="w-5 md:w-6"/>
+        <SvgIcon name="arrowTopRight" className="w-2"/>
       </div>
       <div className="absolute top-0 left-4 md:left-2 bg-primary-blue text-white rounded-b-sm">
         <div className="w-14 md:w-6 flex flex-col justify-center items-center font-bold leading-5 py-2 md:py-1 ">
@@ -349,7 +360,7 @@ const NewsCardMini: React.FC<NewsCardProps> = ({ card }) => (
       {/* <p className="font-medium text-xs ">{card.desc} </p> */}
       <div className="flex  items-center gap-2 pt-2">
         <span className="text-primary-blue font-bold text-xs md:text-xxs ">Read more</span>
-        <SvgIcon name="arrowTopRight" className="w-5 md:w-6"/>
+        <SvgIcon name="arrowTopRight" className="w-2"/>
       </div>
     </div>
   </Card>

@@ -33,7 +33,6 @@ export const Header = () => {
         </MaxWidthWrapper>
       </section>
       {/* main header  */}
-      <section>df</section>
     </header>
   );
 };
