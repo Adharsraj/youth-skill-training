@@ -1,10 +1,11 @@
 'use client'
+
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { AnimatedHamburgerButton } from "@repo/ui/components/HamMenu";
 import Image from "next/image";
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -211,4 +212,3 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
