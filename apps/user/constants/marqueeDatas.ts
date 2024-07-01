@@ -60,4 +60,13 @@ export const logos = [
   {
     name: "alert over here 3.",
   },
+  {
+    name: "ALERT : Certificate verification page is currently work in progress.",
+  },
+  {
+    name: " Please contact office email for more information regarding certificate and marklist :",
+  },
+  {
+    name: "sdyouthskilltrainingcooperatives@gmail.com //regionaldirector@nypyest.ins",
+  },
 ];

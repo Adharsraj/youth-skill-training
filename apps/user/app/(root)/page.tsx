@@ -11,15 +11,15 @@ import { ourSectorDatas } from "../../constants/ourSectorDatas";
 import { truncateText } from "../../utils/textUtils";
 import MarqueeDemo from "../components/marquees/Demo";
 import { ImageMarquee } from "../components/marquees/ImageMarquee";
-import { logos } from "../../constants/marqueeDatas";
+import { logos, textValues } from "../../constants/marqueeDatas";
 
 export default function Home() {
   return (
     <>
       <div className="bg-primary-blue">
-        <div classname="bg-primary-orange">
+        <div className="bg-primary-orange">
 
-      <ImageMarquee mainClass="w-24 md:w-52 " className="md:h-20 h-10" datas={logos}/>
+      <ImageMarquee mainClass="py-0 gap-0" className="" datas={textValues}/>
         </div>
 
         <MaxWidthWrapper className="text-center">
