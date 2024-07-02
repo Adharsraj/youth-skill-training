@@ -117,8 +117,8 @@ export const Header: React.FC = () => {
                 alt="Logo"
                 className="cursor-pointer lg:w-20"
               />
-              <div className="w-28 lg:w-44 ">
-                <h1 className="text-xs md:text-xxs  lg:text-base font-bold lg:leading-5 xl:text-xl xl:leading-6">
+              <div className="w-44 md:w-28 lg:w-44 xl:w-48 ">
+                <h1 className="text-xs md:text-xxs  lg:text-[15px] font-extrabold lg:leading-5 xl:text-xl xl:leading-6">
                   YOUTH EMPLOYABILITY SKILL TRAINING.
                 </h1>
                 <p className="text-[8px] md:text-[6px] font-light pt-1.5 lg:text-xxs">
@@ -128,7 +128,7 @@ export const Header: React.FC = () => {
               </div>
             </div>
             {/* Navigation */}
-            <nav className="hidden md:flex items-center md:text-[8px] lg:text-xs xl:text-sm xl:gap-5   md:gap-3 md:px-2">
+            <nav className="hidden md:flex items-center md:text-[8px] lg:text-xs xl:text-sm xl:gap-7   md:gap-3 md:px-2">
               <a href="/" className="text-gray-800 hover:text-blue-500">
                 Home
               </a>
