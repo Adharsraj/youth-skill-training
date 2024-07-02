@@ -222,3 +222,39 @@ export const sectors = [
     desc:"Under the Grant-in-Aided Scheme, Government of India invites applications for various Diploma Courses recognized by the Government "
   },
 ];
+
+
+
+export const sectorsPageDatas = [
+  {
+    img: st1,
+    title:"Electronics",
+    desc:"Under the Grant-in-Aided Scheme, Government of India invites applications for various Diploma Courses recognized by the Government "
+  },
+  {
+    img: st2,
+    title:"Information Technology",
+    desc:"Information Technology (IT) sector includes roles such as software developers, cybersecurity experts, and IT support specialists, crucial for managing and innovating technology systems."
+  },
+  {
+    img: st3,
+    title:"Beauty",
+    desc:"Beauty sector offers diverse roles like cosmetologists, estheticians, makeup artists, and salon managers, focusing on skincare, haircare, and wellness. "
+  },
+  {
+    img: st4,
+    title:"Electricals",
+    desc:"The electrical sector includes roles such as electrical engineers, renewable energy specialists, and power systems technicians, focusing on electrical infrastructure, maintenance, and innovation."
+  },
+  {
+    img: st5,
+    title:"Retail",
+    desc:"The retail sector offers jobs such as sales associates, store managers, and customer service representatives, centered around selling products and services directly to consumers both in-store and online."
+  },
+  {
+    img: st6,
+    title:"Health Care",
+    desc:"Healthcare sector offers roles like doctors, nurses, pharmacists, and medical technicians, focusing on patient care, treatment, and wellness."
+  },
+ 
+];
