@@ -82,7 +82,7 @@ export const Header: React.FC = () => {
                   </span>
                 </div>
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 items-center">
                 <Button className="bg-primary-orange text-white  text-[8px] xl:text-[13px] lg:text-xs h-7 lg:h-9 xl:h-11 xl:w-[250px]">
                   Student Certificate Verification
                 </Button>
@@ -213,42 +213,7 @@ export const Header: React.FC = () => {
               </div>
             </div>
           </div>
-          {/* Images */}
-          {/* <div className="hidden md:flex lg:justify-end md:space-x-2 lg:space-x-10">
-            <div className="md:w-1/2 lg:w-auto flex justify-end">
-              <Image
-                src="/header/akam.svg"
-                height={20}
-                width={60}
-                alt="Image1"
-              />
-            </div>
-            <div className="md:w-1/2 lg:w-auto flex justify-end">
-              <Image
-                src="/header/g20.svg"
-                height={20}
-                width={50}
-                alt="Image2"
-              />
-            </div>
-            <div className="md:w-1/2 lg:w-auto flex justify-end">
-              <Image
-                src="/header/swach.svg"
-                height={20}
-                width={50}
-                alt="Image3"
-              />
-            </div>
-            <div className="md:w-1/2 lg:w-auto flex justify-end">
-              <Image
-                src="/header/msme.svg"
-                height={20}
-                width={50}
-                alt="Image4"
-              />
-            </div>
-          </div> */}
-          {/* Mobile Images */}
+      
         </div>
       </MaxWidthWrapper>
     </header>
