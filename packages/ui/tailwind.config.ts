@@ -152,6 +152,8 @@ const config = {
        animation: {
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        marqueeText: 'marqueeText 25s linear infinite',
+        marquee2Text: 'marquee2Text 25s linear infinite',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -159,6 +161,14 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        marqueeText: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        marquee2Text: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
         marquee: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(calc(-100% - var(--gap)))" },
