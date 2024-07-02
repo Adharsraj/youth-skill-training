@@ -4,7 +4,7 @@ export default function Home() {
     <div>
       <MaxWidthWrapper>
         <div>
-          er
+          
         </div>
       </MaxWidthWrapper>
     </div>
