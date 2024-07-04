@@ -7,7 +7,6 @@ const LoginPage = () => {
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
-
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
       <div className="relative w-full md:w-1/2 bg-cover bg-center h-64 md:h-auto" style={{ backgroundImage: "url('/login/logimage.svg')" }}>

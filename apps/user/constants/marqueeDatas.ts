@@ -24,6 +24,7 @@ import st5 from '../public/marquee/marqueeSectors/5.svg'
 import st6 from '../public/marquee/marqueeSectors/6.svg'
 
 
+
 export const logos = [
   {
     img: logo1,

@@ -1,66 +1,27 @@
 "use client"
 import React, { useState } from 'react';
+import { electronicsPageData } from '../../../constants/innerData';
 import Image from 'next/image';
-import { electronicsPageData, beautyPageData, electricalPageData, ITPageData, retailPageData, healthcarePageData } from '../../../../constants/innerData';
-
-// Define sector data mapping
-const sectorDataMap = {
-  beauty: beautyPageData,
-  electronics: electronicsPageData,
-  electrical: electricalPageData,
-  it: ITPageData,
-  retail: retailPageData,
-  healthcare: healthcarePageData
-};
 
 const ElectronicsPage: React.FC = () => {
-  const [selectedSector, setSelectedSector] = useState<string>('electronics');
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Function to handle next slide
   const nextSlide = () => {
-    const currentSectorData = sectorDataMap[selectedSector];
     setCurrentSlide((prevSlide) =>
-      prevSlide === currentSectorData[2].slider.length - 1 ? 0 : prevSlide + 1
+      prevSlide === electronicsPageData[2].slider.length - 1 ? 0 : prevSlide + 1
     );
   };
 
-  // Function to handle previous slide
   const prevSlide = () => {
-    const currentSectorData = sectorDataMap[selectedSector];
     setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? currentSectorData[2].slider.length - 1 : prevSlide - 1
+      prevSlide === 0 ? electronicsPageData[2].slider.length - 1 : prevSlide - 1
     );
   };
-
-  // Function to handle sector selection
-  const handleSectorSelection = (sector: string) => {
-    setSelectedSector(sector);
-    setCurrentSlide(0); // Reset slide when sector changes
-  };
-
-  // Get current sector data based on selected sector
-  const currentSectorData = sectorDataMap[selectedSector];
 
   return (
     <div className="w-full px-0">
-      {/* Sector selection buttons */}
-      <div className="flex justify-center space-x-4 my-4">
-        {Object.keys(sectorDataMap).map((sector) => (
-          <button
-            key={sector}
-            className={`py-2 px-4 ${selectedSector === sector ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'}`}
-            onClick={() => handleSectorSelection(sector)}
-          >
-            {sector.charAt(0).toUpperCase() + sector.slice(1)}
-          </button>
-        ))}
-      </div>
-
-      {/* Render sections based on current sector data */}
-      {currentSectorData.map((section, index) => (
+      {electronicsPageData.map((section, index) => (
         <section key={index} className="my-8 px-0">
-          {/* Section 1: Image with text overlay */}
           {section.section === 1 && (
             <div className="relative md:h-[280px] h-[180px] w-full">
               <Image
@@ -76,8 +37,6 @@ const ElectronicsPage: React.FC = () => {
               </div>
             </div>
           )}
-
-          {/* Section 2: Side-by-side image and text */}
           {section.section === 2 && (
             <div className="flex flex-col-reverse md:flex-row items-center h-auto md:h-[300px] justify-center w-full px-0">
               <div className="relative w-full md:w-1/3 h-[200px] md:h-full mb-4 md:mb-0 md:mr-8">
@@ -94,8 +53,6 @@ const ElectronicsPage: React.FC = () => {
               </div>
             </div>
           )}
-
-          {/* Section 3: Slider with navigation buttons */}
           {section.section === 3 && (
             <div className="flex flex-col md:flex-row items-center h-auto md:h-[380px] bg-primary-blue w-full px-0">
               <div className="relative w-full md:w-1/2 overflow-hidden mb-4 md:mb-0">
@@ -107,9 +64,8 @@ const ElectronicsPage: React.FC = () => {
                     }}
                   >
                     {section.slider && section.slider.map((slide, slideIndex) => (
-                      <div key={slideIndex} className="flex-none w-full flex-shrink-0 px-0 py-2">
-                        <h3 className="lg:text-xl md:text-xl text-xs font-semibold text-white text-center">{section.sliderHeading}</h3>
-                        <h3 className="lg:text-xl md:text-xl text-xs font-semibold text-white text-center">{slide.heading}</h3>
+                      <div key={slideIndex} className="flex-none w-full flex-shrink-0 px-4 py-2">
+                        <h3 className="lg:text-3xl md:text-xl text-md font-semibold text-white text-center">{slide.heading}</h3>
                         <p className="mt-2 text-white md:text-xs lg:text-md text-xs text-center w-[180px] md:w-[300px] mx-auto">{slide.description}</p>
                       </div>
                     ))}
@@ -154,8 +110,6 @@ const ElectronicsPage: React.FC = () => {
               </div>
             </div>
           )}
-
-          {/* Section 4: Image with text */}
           {section.section === 4 && (
             <div className="flex flex-col md:flex-row items-center h-auto md:h-[280px] justify-center w-full px-0">
               <div className="w-full md:w-1/2">
