@@ -18,7 +18,7 @@ interface SectorCardProps {
 
 const SectorCard: React.FC<SectorCardProps> = ({ sector }) => {
   return (
-    <Link href={`/oursectors/${encodeURIComponent(sector.title.toLowerCase())}`}>
+    <Link href={`/oursectors/${sector.title}`}>
       <div className="bg-black cursor-pointer">
         <div className="flex justify-center items-center relative">
           <Image
