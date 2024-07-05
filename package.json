@@ -21,6 +21,8 @@
     "packages/*"
   ],
   "dependencies": {
+    "embla-carousel-react": "^8.1.6",
+    "lucide-react": "^0.400.0",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1"

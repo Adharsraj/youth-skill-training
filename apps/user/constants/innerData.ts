@@ -82,7 +82,7 @@ export const beautyPageData = [
         section: 2,
         image: beat2,
         heading: "Beauty",
-        paragraph: "e Beauty sector within our Youth Employability Skill Training program is designed to equip young individuals with the knowledge and skills required to thrive in the dynamic beauty industry. This sector focuses on a comprehensive range of training modules to ensure that participants are well-prepared for various roles in beauty and personal care"
+        paragraph: "Beauty sector within our Youth Employability Skill Training program is designed to equip young individuals with the knowledge and skills required to thrive in the dynamic beauty industry. This sector focuses on a comprehensive range of training modules to ensure that participants are well-prepared for various roles in beauty and personal care"
     },
     {
         section: 3,
