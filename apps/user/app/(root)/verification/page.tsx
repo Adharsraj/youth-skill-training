@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { Input } from '@repo/ui/components/ui/input';
-import ImageUpload from '@repo/ui/components/ui/imageupload';
+import ImageUpload from '../../components/imageupload';
 import { Label } from '@repo/ui/components/ui/label';
 import { Button } from '@repo/ui/components/ui/button';
 
@@ -26,8 +26,6 @@ const StudentVerification: React.FC = () => {
         <Input type="text" className="mb-2 lg:mr-2 w-full lg:w-[700px]" placeholder="Type" />
         <Button className="bg-primary-blue w-full lg:w-auto mb-2 lg:mb-0">Search</Button>
       </div>
-
-      <form>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
             <Label className="block">Student Name</Label>
@@ -106,11 +104,6 @@ const StudentVerification: React.FC = () => {
             <Input type="text" className="mt-1 w-full" placeholder="Officer Register Book Number" />
           </div>
         </div>
-
-        <div className="mt-6">
-          <Button type="submit" className="w-full bg-primary-blue">Submit</Button>
-        </div>
-      </form>
     </div>
   );
 };

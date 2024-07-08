@@ -123,7 +123,7 @@ const PaymentPage: React.FC = () => {
               />
             </div>
             <div className="mt-6">
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full bg-primary-blue">
                 Submit
               </Button>
             </div>

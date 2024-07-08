@@ -62,7 +62,6 @@ const ElectronicsPage: React.FC<ElectronicsPageProps> = ({ params }) => {
       <p>No sector found with the title {params.sectorid.replace(/%20/g, " ").toLowerCase()}</p>
     );
   }
-
   return (
     <div>
       <div className="relative md:h-[280px] h-[180px] w-full">

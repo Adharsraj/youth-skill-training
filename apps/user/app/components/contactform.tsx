@@ -111,7 +111,7 @@ const ContactForm: React.FC = () => {
       </div>
       <div className="flex justify-end">
         <Button type="submit" variant="default" className="bg-primary-blue rounded-none" size="default" style={{ width: "100%" }}>
-          Submit
+          Send Message
         </Button>
       </div>
     </form>
