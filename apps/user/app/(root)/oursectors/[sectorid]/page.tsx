@@ -59,7 +59,10 @@ const ElectronicsPage: React.FC<ElectronicsPageProps> = ({ params }) => {
 
   if (!sector) {
     return (
-      <p>No sector found with the title {params.sectorid.replace(/%20/g, " ").toLowerCase()}</p>
+      <p>
+        No sector found with the title{" "}
+        {params.sectorid.replace(/%20/g, " ").toLowerCase()}
+      </p>
     );
   }
 
@@ -105,9 +108,9 @@ const ElectronicsPage: React.FC<ElectronicsPageProps> = ({ params }) => {
         </section>
 
         {/* Section 3 */}
-        <section className="my-8 px-0">
-          <div className="flex flex-col md:flex-row items-center h-auto md:h-[380px] bg-primary-blue w-full px-0">
-            <div className="relative w-full md:w-1/2 overflow-hidden mb-4 md:mb-0 sm:h-[250px]">
+        <section className="my-8 px-0 bg-primary-blue max-w-[1920px] mx-auto">
+          <div className="md:flex w-full md:justify-center md:items-center">
+            <div className="md:w-2/5">
               <Carousel
                 opts={{
                   loop: true,
@@ -119,40 +122,39 @@ const ElectronicsPage: React.FC<ElectronicsPageProps> = ({ params }) => {
                   }),
                 ]}
               >
-                <h3 className="lg:text-2xl md:text-xl text-md font-semibold text-white text-center">
+                <h3 className="text-lg font-bold text-white text-center mt-4">
                   {sector.sliderHeading}
                 </h3>
                 <CarouselContent>
                   {sector.slider.map((slide, slideIndex) => (
                     <CarouselItem
                       key={slideIndex}
-                      className="flex items-center justify-center h-[200px] md:h-[250px]"
+                      className="flex items-center justify-center"
                     >
-                      <div className="flex flex-col items-center justify-center px-4 sm:p-6 text-center">
-                        <h3 className="lg:text-2xl md:text-lg text-md font-semibold text-white mb-2">
+                      <div className="text-center w-[180px] flex flex-col gap-2 pt-6">
+                        <h3 className="leading-5 text-white font-bold text-sm">
                           {slide.heading}
                         </h3>
-                        <p className="text-white md:text-[12px] lg:text-lg text-[7px] w-[160px] lg:w-[450px] md:w-[310px] mx-auto">
+                        <p className="text-white text-xxs leading-4">
                           {slide.description}
                         </p>
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute top-1/2 left-0 transform -translate-y-1/2 ml-[30px] md:ml-[20px] lg:ml-[80px] px-2 py-1 z-10">
+                <CarouselPrevious className="absolute top-1/2 left-3 transform -translate-y-1/2 z-10">
                   <span className="hidden md:block">Previous</span>
                 </CarouselPrevious>
-                <CarouselNext className="absolute top-1/2 right-0 transform -translate-y-1/2 mr-[30px] md:mr-[20px] lg:mr-[80px] px-2 py-1 z-10">
+                <CarouselNext className="absolute top-1/2 right-3 transform -translate-y-1/2 z-10">
                   <span className="hidden md:block">Next</span>
                 </CarouselNext>
               </Carousel>
             </div>
-            <div className="relative w-full md:w-1/3 h-[200px] md:h-[280px] ml-0 md:ml-8">
+            <div className=" flex items-center justify-center pb-4 md:pb-0 w-full">
               <Image
                 src={sector.s3Img}
                 alt="Section Image"
-                className="lg:w-full lg:h-full px-8 py-8 object-cover"
-                layout="fill"
+                className="h-[205px] w-full object-cover px-2 md:py-2 md:px-4 md:h-[230px] lg:h-[450px] lg:py-5 lg:px-5"
               />
             </div>
           </div>
