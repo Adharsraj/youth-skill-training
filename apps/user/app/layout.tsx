@@ -1,12 +1,12 @@
 import { Metadata } from "next";
-import { Montserrat } from "@next/font/google";
+// import { Montserrat } from "@next/font/google";
 import "@repo/ui/globals.css";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-montserrat",
-});
+// const montserrat = Montserrat({
+//   subsets: ["latin"],
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+//   variable: "--font-montserrat",
+// });
 
 export const metadata: Metadata = {
   title:"Youth Skill Training",
@@ -19,7 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={montserrat.variable}>
+    // <html lang="en" className={montserrat.variable}>
+          <html lang="en" >
+
       <body className="font-montserrat">
         {children}
       </body>
