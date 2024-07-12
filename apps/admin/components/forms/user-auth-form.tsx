@@ -81,6 +81,7 @@ export default function UserAuthForm() {
             Or continue with
           </span>
         </div>
+        
       </div>
       <GoogleSignInButton />
     </>
