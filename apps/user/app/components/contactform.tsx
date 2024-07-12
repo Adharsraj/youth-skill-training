@@ -2,8 +2,10 @@
 import * as React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Input } from "@repo/ui/components/ui/input";
+import { Separator } from "@repo/ui/components/ui/separator";
 import { Button } from "@repo/ui/components/ui/button";
 import Image from "next/image";
+import { MaxWidthWrapper } from "@repo/ui/components/MaxWidthWrapper";
 
 interface FormInputs {
   fullName: string;
@@ -22,7 +24,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form className="space-y-2 md:w-[650px] md:h-[auto] w-full h-auto" onSubmit={handleSubmit(onSubmit)}>
+    <form className="space-y-2  w-full h-auto" onSubmit={handleSubmit(onSubmit)}>
       <div className="flex md:justify-center lg:justify-start">
         <div className="flex lg:items-center mb-4">
           <Image
@@ -34,8 +36,10 @@ const ContactForm: React.FC = () => {
           />
           <h1 className="md:text-2xl text-lg font-bold text-red-600">Contact Us</h1>
         </div>
+       
       </div>
-      <div className="border-t border-whitesmoke mt-4 mb-4"></div>
+      <Separator className="my-6" />
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="mt-2">
           <label htmlFor="fullName" className="block text-sm font-medium text-primary-blue">
@@ -111,7 +115,7 @@ const ContactForm: React.FC = () => {
       </div>
       <div className="flex justify-end">
         <Button type="submit" variant="default" className="bg-primary-blue rounded-none" size="default" style={{ width: "100%" }}>
-          Submit
+          Send Message
         </Button>
       </div>
     </form>

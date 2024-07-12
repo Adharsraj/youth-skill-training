@@ -1,21 +1,12 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import React from 'react';
 import { Input } from '@repo/ui/components/ui/input';
-import ImageUpload from '@repo/ui/components/ui/imageupload';
 import { Label } from '@repo/ui/components/ui/label';
 import { Button } from '@repo/ui/components/ui/button';
 
 const StudentVerification: React.FC = () => {
-  const [certificateImage, setCertificateImage] = useState<File | null>(null);
-  const [marklistImage, setMarklistImage] = useState<File | null>(null);
-
-  const handleCertificateUpload = (file: File | null) => {
-    setCertificateImage(file);
-  };
-
-  const handleMarklistUpload = (file: File | null) => {
-    setMarklistImage(file);
-  };
+  const certificateImageUrl = "/others/photo.svg"; 
+  const marklistImageUrl = "/others/photo.svg"; 
 
   return (
     <div className="max-w-7xl mx-auto p-6 bg-white">
@@ -54,11 +45,19 @@ const StudentVerification: React.FC = () => {
             <Input type="text" className="mt-1" placeholder="College Name" />
           </div>
           <div className="flex flex-col lg:place-items-start">
-            <ImageUpload label="" onImageUpload={handleCertificateUpload} />
+            <img
+              src={certificateImageUrl}
+              alt="Certificate"
+              className="w-200 h-200 object-cover mt-2"
+            />
             <Label className="block mt-2 text-center lg:text-left">Certificate Image</Label>
           </div>
           <div className="flex flex-col lg:place-items-start">
-            <ImageUpload label="" onImageUpload={handleMarklistUpload} />
+            <img
+              src={marklistImageUrl}
+              alt="Marklist"
+              className="w-200 h-200 object-cover mt-2"
+            />
             <Label className="block mt-2 text-center lg:text-left">Marklist Image</Label>
           </div>
         </div>
@@ -105,10 +104,6 @@ const StudentVerification: React.FC = () => {
             <Label className="block">Officer Register Book Number</Label>
             <Input type="text" className="mt-1 w-full" placeholder="Officer Register Book Number" />
           </div>
-        </div>
-
-        <div className="mt-6">
-          <Button type="submit" className="w-full bg-primary-blue">Submit</Button>
         </div>
       </form>
     </div>
