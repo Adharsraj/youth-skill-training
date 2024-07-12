@@ -1,5 +1,6 @@
-import { cn } from "@ui/lib/utils";
+import { cn } from "../lib/utils";
 import { ReactNode } from "react";
+
 
 export const MaxWidthWrapper: React.FC<IProps> = ({ children, className }) => {
   return (
