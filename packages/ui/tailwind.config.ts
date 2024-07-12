@@ -198,6 +198,7 @@ const config = {
           "20%,50%": { opacity: "0" },
         },
       },
+      
       // animation: {
       //   marquee: "marquee var(--duration) linear infinite",
       //   "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
